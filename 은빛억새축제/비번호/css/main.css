@@ -20,6 +20,10 @@ img{
     clear: both;
 }
 
+.hidden{
+    display: none;
+}
+
 .wrapper{
     width: 1200px;
     margin: 0 auto;
@@ -27,7 +31,6 @@ img{
 
 header{
     height: 100px;
-    background: #aaa;
 }
 
 .slides{
@@ -37,7 +40,7 @@ header{
 
 main{
     height: 200px;
-    background: #ccc;
+    background: #fff;
 }
 
 footer{
@@ -47,16 +50,77 @@ footer{
 
 header .logo{
     width: 200px;
-    background: #999;
     float: left;
-    height: 100%;
+    padding-top: 30px;
 }
 
 header nav{
-    width: 1000px;
-    background: #888;
+    width: 720px;
     float: right;
-    height: 100%;
+    margin-top: 30px;
+    margin-right: 10px;
+    position: relative;
+    z-index: 1;
+}
+
+nav>ul>li{
+    line-height: 40px;
+    float: left;
+    width: 180px;
+    text-align: center;
+    position: relative;
+}
+
+nav>ul>li a{
+    color: #fff;
+    display: block;
+    background: #333;
+}
+
+nav ul ul li a{
+    background: #fff;
+    display: block;
+    color: #333;
+}
+
+nav>ul>li a:hover{
+    background: #FCA148;
+}
+
+nav ul ul a:hover{
+    background: #49D2FC;
+}
+
+nav ul ul{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    display: none;
+}
+
+.slides{
+    overflow: hidden;
+    height: 300px;
+}
+
+.slides>ul{
+    height: 900px;
+}
+
+.slide{
+    width: 1200px;
+    height: 300px;
+    position: relative;
+}
+
+.slide h2{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background: rgba(0,0,0,0.8);
+    padding: 10px 25px;
+    color: #fff;
+    transform: translate(-50%, -50%);
 }
 
 main section{
